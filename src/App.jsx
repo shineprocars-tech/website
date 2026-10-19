@@ -4,11 +4,11 @@ import React, { useState, useEffect, useRef } from 'react';
    SHINE PRO — Car Care & Spa, Hosapete
    Single File React Component
    Includes Instagram Reels slider in "Our Work" section.
+   Includes Featurable Google Reviews widget.
    ========================================================= */
 
 const REELS = [
   'https://www.instagram.com/reel/DFwok7jPgJn/',
- 
   'https://www.instagram.com/reel/DJFL3UXBTTP/',
   'https://www.instagram.com/reel/DJCphFAhShG/',
   'https://www.instagram.com/reel/DNLdI7NvhED/',
@@ -26,9 +26,10 @@ const CarDetail = () => {
   const statsRef = useRef(null);
   const videoRef = useRef(null);
   const sliderRef = useRef(null);
+  const featurableRef = useRef(null);
 
   /* ---------- WhatsApp ---------- */
-  const whatsappNumber = '918431845633';
+  const whatsappNumber = '916361291895';
   const whatsappMessage = encodeURIComponent(
     "Hi Shine Pro! I'd like a quote for PPF / ceramic coating / detailing."
   );
@@ -68,6 +69,22 @@ const CarDetail = () => {
     if (!el) return;
     el.addEventListener('scroll', handle, { passive: true });
     return () => el.removeEventListener('scroll', handle);
+  }, []);
+
+  /* ---------- Load Featurable Google Reviews widget script ---------- */
+  useEffect(() => {
+    const scriptId = 'featurable-embed-script';
+    const existing = document.getElementById(scriptId);
+
+    if (!existing) {
+      const s = document.createElement('script');
+      s.id = scriptId;
+      s.async = true;
+      s.defer = true;
+      s.charset = 'UTF-8';
+      s.src = 'https://cdn.featurable.com/widget/v2/embed.js';
+      document.body.appendChild(s);
+    }
   }, []);
 
   /* ---------- Inject Commissioner font ---------- */
@@ -375,7 +392,7 @@ const CarDetail = () => {
 
           <div className="flex items-center gap-4">
             <a
-              href="tel:+918431845633"
+              href="tel:+916361291895"
               className="hidden md:inline-block bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-semibold px-6 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95"
             >
               Call
@@ -414,10 +431,10 @@ const CarDetail = () => {
               </a>
             ))}
             <a
-              href="tel:+918431845633"
+              href="tel:+916361291895"
               className="block w-full text-center bg-yellow-400 text-black text-sm font-semibold py-2.5 rounded-full"
             >
-              Call +91 84318 45633
+              Call +91 6361291895
             </a>
             <a
               href={whatsappLink}
@@ -503,10 +520,10 @@ const CarDetail = () => {
             </p>
             <div className="mt-5 flex flex-wrap items-center gap-3">
               <a
-                href="tel:+918431845633"
+                href="tel:+916361291895"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black text-sm font-semibold px-5 py-2.5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95"
               >
-                Call +91 84318 45633
+                Call +91 6361291895
               </a>
               <a
                 href={whatsappLink}
@@ -775,230 +792,230 @@ const CarDetail = () => {
       </section>
 
       {/* ============ OUR WORK — INSTAGRAM REELS SLIDER ============ */}
-<section id="work" className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
-  {/* Ambient background glows */}
-  <div className="absolute top-0 -left-40 w-96 h-96 bg-orange-200/40 rounded-full blur-3xl pointer-events-none" />
-  <div className="absolute bottom-0 -right-40 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl pointer-events-none" />
+      <section id="work" className="relative max-w-7xl mx-auto px-6 py-20 overflow-hidden">
+        {/* Ambient background glows */}
+        <div className="absolute top-0 -left-40 w-96 h-96 bg-orange-200/40 rounded-full blur-3xl pointer-events-none" />
+        <div className="absolute bottom-0 -right-40 w-96 h-96 bg-yellow-200/40 rounded-full blur-3xl pointer-events-none" />
 
-  <div className="relative">
-    {/* Header */}
-    <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
-      <div>
-        <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">
-          <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
-          Our work
-        </div>
-        <h3 className="text-3xl md:text-5xl font-light mb-3 leading-tight">
-          Results that speak <br className="hidden md:block" />
-          for <span className="font-medium bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">themselves</span>
-        </h3>
-        <p className="text-gray-500 text-sm max-w-xl">
-          Live reels from the Shine Pro studio — PPF, coatings, detailing, and upgrades.
-        </p>
-      </div>
+        <div className="relative">
+          {/* Header */}
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
+            <div>
+              <div className="inline-flex items-center gap-2 bg-orange-50 text-orange-600 text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full mb-4">
+                <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
+                Our work
+              </div>
+              <h3 className="text-3xl md:text-5xl font-light mb-3 leading-tight">
+                Results that speak <br className="hidden md:block" />
+                for <span className="font-medium bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">themselves</span>
+              </h3>
+              <p className="text-gray-500 text-sm max-w-xl">
+                Live reels from the Shine Pro studio — PPF, coatings, detailing, and upgrades.
+              </p>
+            </div>
 
-      {/* Slider arrows */}
-      <div className="flex gap-2 shrink-0">
-        <button
-          onClick={() => scrollSlider(-1)}
-          aria-label="Scroll left"
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-orange-500 hover:text-white hover:border-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm hover:shadow-orange-500/30 hover:shadow-lg"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="15 18 9 12 15 6" />
-          </svg>
-        </button>
-        <button
-          onClick={() => scrollSlider(1)}
-          aria-label="Scroll right"
-          className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-orange-500 hover:text-white hover:border-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm hover:shadow-orange-500/30 hover:shadow-lg"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <polyline points="9 18 15 12 9 6" />
-          </svg>
-        </button>
-      </div>
-    </div>
+            {/* Slider arrows */}
+            <div className="flex gap-2 shrink-0">
+              <button
+                onClick={() => scrollSlider(-1)}
+                aria-label="Scroll left"
+                className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-orange-500 hover:text-white hover:border-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm hover:shadow-orange-500/30 hover:shadow-lg"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="15 18 9 12 15 6" />
+                </svg>
+              </button>
+              <button
+                onClick={() => scrollSlider(1)}
+                aria-label="Scroll right"
+                className="w-12 h-12 rounded-full border border-gray-200 bg-white hover:bg-orange-500 hover:text-white hover:border-orange-500 flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 shadow-sm hover:shadow-orange-500/30 hover:shadow-lg"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </button>
+            </div>
+          </div>
 
-    {/* Reels slider */}
-    <div
-      ref={sliderRef}
-      className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-6 px-6 scrollbar-hide"
-      style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
-    >
-      {REELS.map((url, i) => (
-        <div
-          key={url}
-          className="snap-start shrink-0 w-[300px] sm:w-[330px] md:w-[350px] group"
-        >
-          {/* Outer gradient border wrapper */}
-          <div className="relative rounded-[28px] p-[2px] bg-gradient-to-br from-orange-400 via-yellow-300 to-orange-500 hover:from-orange-500 hover:via-yellow-400 hover:to-orange-600 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-orange-500/30 group-hover:-translate-y-2">
+          {/* Reels slider */}
+          <div
+            ref={sliderRef}
+            className="flex gap-6 overflow-x-auto snap-x snap-mandatory pb-8 -mx-6 px-6 scrollbar-hide"
+            style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+          >
+            {REELS.map((url, i) => (
+              <div
+                key={url}
+                className="snap-start shrink-0 w-[300px] sm:w-[330px] md:w-[350px] group"
+              >
+                {/* Outer gradient border wrapper */}
+                <div className="relative rounded-[28px] p-[2px] bg-gradient-to-br from-orange-400 via-yellow-300 to-orange-500 hover:from-orange-500 hover:via-yellow-400 hover:to-orange-600 transition-all duration-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-orange-500/30 group-hover:-translate-y-2">
 
-            {/* Inner card */}
-            <div className="relative rounded-[26px] bg-white overflow-hidden">
+                  {/* Inner card */}
+                  <div className="relative rounded-[26px] bg-white overflow-hidden">
 
-              {/* Top chrome bar (fake IG header) */}
-              <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
-                <div className="flex items-center gap-2.5 min-w-0">
-                  {/* Avatar with gradient ring */}
-                  <div className="relative w-9 h-9 shrink-0">
-                    <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 animate-spin-slow" />
-                    <div className="absolute inset-[2px] rounded-full bg-white flex items-center justify-center">
-                      <span className="text-[10px] font-black text-gray-900">SP</span>
+                    {/* Top chrome bar (fake IG header) */}
+                    <div className="flex items-center justify-between px-4 py-3 border-b border-gray-100">
+                      <div className="flex items-center gap-2.5 min-w-0">
+                        {/* Avatar with gradient ring */}
+                        <div className="relative w-9 h-9 shrink-0">
+                          <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 animate-spin-slow" />
+                          <div className="absolute inset-[2px] rounded-full bg-white flex items-center justify-center">
+                            <span className="text-[10px] font-black text-gray-900">SP</span>
+                          </div>
+                        </div>
+                        <div className="min-w-0">
+                          <p className="text-xs font-bold text-gray-900 truncate">
+                            shinepro_hospet
+                          </p>
+                          <p className="text-[10px] text-gray-500 truncate">
+                            Hosapete · Car care
+                          </p>
+                        </div>
+                      </div>
+
+                      {/* Three dots */}
+                      <div className="flex gap-0.5 shrink-0">
+                        <span className="w-1 h-1 rounded-full bg-gray-400" />
+                        <span className="w-1 h-1 rounded-full bg-gray-400" />
+                        <span className="w-1 h-1 rounded-full bg-gray-400" />
+                      </div>
+                    </div>
+
+                    {/* Instagram embed */}
+                    <div className="p-2 pt-3 bg-gradient-to-b from-white to-gray-50 min-h-[500px] flex items-start justify-center">
+                      <blockquote
+                        className="instagram-media"
+                        data-instgrm-captioned
+                        data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                        data-instgrm-version="14"
+                        style={{
+                          background: '#FFF',
+                          border: 0,
+                          borderRadius: '16px',
+                          boxShadow: 'none',
+                          margin: 0,
+                          maxWidth: '540px',
+                          minWidth: '260px',
+                          padding: 0,
+                          width: '100%',
+                        }}
+                      >
+                        <a
+                          href={`${url}?utm_source=ig_embed&utm_campaign=loading`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{
+                            display: 'block',
+                            background: '#FFFFFF',
+                            lineHeight: 0,
+                            padding: '60px 0',
+                            textAlign: 'center',
+                            textDecoration: 'none',
+                            width: '100%',
+                            color: '#3897f0',
+                            fontFamily: 'Arial, sans-serif',
+                            fontSize: 14,
+                            borderRadius: '16px',
+                          }}
+                        >
+                          View this post on Instagram
+                        </a>
+                      </blockquote>
+                    </div>
+
+                    {/* Bottom chrome bar (fake IG footer) */}
+                    <div className="px-4 py-3 border-t border-gray-100 flex items-center justify-between">
+                      <div className="flex items-center gap-3 text-gray-700">
+                        {/* Heart */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 hover:fill-red-500 transition cursor-pointer">
+                          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                        </svg>
+                        {/* Comment */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-orange-500 transition cursor-pointer">
+                          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                        {/* Share */}
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-orange-500 transition cursor-pointer">
+                          <line x1="22" y1="2" x2="11" y2="13" />
+                          <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                      </div>
+                      <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-bold uppercase tracking-wider text-orange-500 hover:text-orange-600"
+                      >
+                        Open →
+                      </a>
                     </div>
                   </div>
-                  <div className="min-w-0">
-                    <p className="text-xs font-bold text-gray-900 truncate">
-                      shinepro_hospet
-                    </p>
-                    <p className="text-[10px] text-gray-500 truncate">
-                      Hosapete · Car care
-                    </p>
+                </div>
+              </div>
+            ))}
+
+            {/* End card — "See more on Instagram" */}
+            <a
+              href="https://www.instagram.com/shinepro_hospet"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="snap-start shrink-0 w-[240px] sm:w-[260px] md:w-[280px] group"
+            >
+              <div className="h-full rounded-[28px] p-[2px] bg-gradient-to-br from-orange-400 via-yellow-300 to-orange-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:-translate-y-2">
+                <div className="h-full rounded-[26px] bg-white flex flex-col items-center justify-center text-center p-8 gap-4 min-h-[500px]">
+                  <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center p-[3px] group-hover:scale-110 transition-transform duration-500">
+                    <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#igGrad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <defs>
+                          <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stopColor="#FCAF45" />
+                            <stop offset="50%" stopColor="#E1306C" />
+                            <stop offset="100%" stopColor="#833AB4" />
+                          </linearGradient>
+                        </defs>
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                      </svg>
+                    </div>
                   </div>
-                </div>
-
-                {/* Three dots */}
-                <div className="flex gap-0.5 shrink-0">
-                  <span className="w-1 h-1 rounded-full bg-gray-400" />
-                  <span className="w-1 h-1 rounded-full bg-gray-400" />
-                  <span className="w-1 h-1 rounded-full bg-gray-400" />
+                  <div>
+                    <p className="text-base font-black text-gray-900">See more</p>
+                    <p className="text-xs text-gray-500 mt-1">@shinepro_hospet</p>
+                  </div>
+                  <span className="text-orange-500 text-sm font-bold group-hover:translate-x-1 transition-transform duration-300">
+                    Follow →
+                  </span>
                 </div>
               </div>
+            </a>
+          </div>
 
-              {/* Instagram embed */}
-              <div className="p-2 pt-3 bg-gradient-to-b from-white to-gray-50 min-h-[500px] flex items-start justify-center">
-                <blockquote
-                  className="instagram-media"
-                  data-instgrm-captioned
-                  data-instgrm-permalink={`${url}?utm_source=ig_embed&utm_campaign=loading`}
-                  data-instgrm-version="14"
-                  style={{
-                    background: '#FFF',
-                    border: 0,
-                    borderRadius: '16px',
-                    boxShadow: 'none',
-                    margin: 0,
-                    maxWidth: '540px',
-                    minWidth: '260px',
-                    padding: 0,
-                    width: '100%',
-                  }}
-                >
-                  <a
-                    href={`${url}?utm_source=ig_embed&utm_campaign=loading`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={{
-                      display: 'block',
-                      background: '#FFFFFF',
-                      lineHeight: 0,
-                      padding: '60px 0',
-                      textAlign: 'center',
-                      textDecoration: 'none',
-                      width: '100%',
-                      color: '#3897f0',
-                      fontFamily: 'Arial, sans-serif',
-                      fontSize: 14,
-                      borderRadius: '16px',
-                    }}
-                  >
-                    View this post on Instagram
-                  </a>
-                </blockquote>
-              </div>
+          {/* Swipe hint (mobile) */}
+          <div className="md:hidden mt-2 flex items-center justify-center gap-2 text-xs text-gray-400">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="15 18 9 12 15 6" />
+            </svg>
+            Swipe to see more
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+          </div>
 
-              {/* Bottom chrome bar (fake IG footer) */}
-              <div className="px-4 py-3 border-t border-gray-100 flex items-center justify-between">
-                <div className="flex items-center gap-3 text-gray-700">
-                  {/* Heart */}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-red-500 hover:fill-red-500 transition cursor-pointer">
-                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
-                  </svg>
-                  {/* Comment */}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-orange-500 transition cursor-pointer">
-                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                  </svg>
-                  {/* Share */}
-                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="hover:text-orange-500 transition cursor-pointer">
-                    <line x1="22" y1="2" x2="11" y2="13" />
-                    <polygon points="22 2 15 22 11 13 2 9 22 2" />
-                  </svg>
-                </div>
-                <a
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-[10px] font-bold uppercase tracking-wider text-orange-500 hover:text-orange-600"
-                >
-                  Open →
-                </a>
-              </div>
-            </div>
+          {/* Dot indicators */}
+          <div className="flex items-center justify-center gap-2 mt-6">
+            {[...REELS, 'more'].map((_, i) => (
+              <span
+                key={i}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === 0 ? 'w-8 bg-orange-500' : 'w-1.5 bg-gray-300'
+                }`}
+              />
+            ))}
           </div>
         </div>
-      ))}
-
-      {/* End card — "See more on Instagram" */}
-      <a
-        href="https://www.instagram.com/shinepro_hospet"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="snap-start shrink-0 w-[240px] sm:w-[260px] md:w-[280px] group"
-      >
-        <div className="h-full rounded-[28px] p-[2px] bg-gradient-to-br from-orange-400 via-yellow-300 to-orange-500 shadow-lg group-hover:shadow-2xl group-hover:shadow-orange-500/30 transition-all duration-500 group-hover:-translate-y-2">
-          <div className="h-full rounded-[26px] bg-white flex flex-col items-center justify-center text-center p-8 gap-4 min-h-[500px]">
-            <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 flex items-center justify-center p-[3px] group-hover:scale-110 transition-transform duration-500">
-              <div className="w-full h-full rounded-full bg-white flex items-center justify-center">
-                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="url(#igGrad)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <defs>
-                    <linearGradient id="igGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                      <stop offset="0%" stopColor="#FCAF45" />
-                      <stop offset="50%" stopColor="#E1306C" />
-                      <stop offset="100%" stopColor="#833AB4" />
-                    </linearGradient>
-                  </defs>
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                </svg>
-              </div>
-            </div>
-            <div>
-              <p className="text-base font-black text-gray-900">See more</p>
-              <p className="text-xs text-gray-500 mt-1">@shinepro_hospet</p>
-            </div>
-            <span className="text-orange-500 text-sm font-bold group-hover:translate-x-1 transition-transform duration-300">
-              Follow →
-            </span>
-          </div>
-        </div>
-      </a>
-    </div>
-
-    {/* Swipe hint (mobile) */}
-    <div className="md:hidden mt-2 flex items-center justify-center gap-2 text-xs text-gray-400">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="15 18 9 12 15 6" />
-      </svg>
-      Swipe to see more
-      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-        <polyline points="9 18 15 12 9 6" />
-      </svg>
-    </div>
-
-    {/* Dot indicators */}
-    <div className="flex items-center justify-center gap-2 mt-6">
-      {[...REELS, 'more'].map((_, i) => (
-        <span
-          key={i}
-          className={`h-1.5 rounded-full transition-all duration-300 ${
-            i === 0 ? 'w-8 bg-orange-500' : 'w-1.5 bg-gray-300'
-          }`}
-        />
-      ))}
-    </div>
-  </div>
-</section>
+      </section>
 
       {/* ============ REVIEWS ============ */}
       <section id="reviews" className="max-w-7xl mx-auto px-6 py-20 text-center">
@@ -1018,45 +1035,12 @@ const CarDetail = () => {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-6">
-          {testimonials.slice(0, 3).map((t, i) => (
-            <div
-              key={i}
-              className="bg-gray-50 rounded-2xl p-8 text-left hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-            >
-              <div className="text-orange-400 mb-4">★★★★★</div>
-              <p className="text-sm text-gray-700 mb-6 leading-relaxed">{t.quote}</p>
-              <div className="flex items-center gap-3">
-                <img src={t.avatar} alt={t.name} className="w-10 h-10 rounded-full" />
-                <div>
-                  <p className="text-sm font-semibold">{t.name}</p>
-                  <p className="text-xs text-gray-500">{t.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {testimonials.length > 3 && (
-          <div className="grid md:grid-cols-2 gap-6 mt-6 max-w-4xl mx-auto">
-            {testimonials.slice(3).map((t, i) => (
-              <div
-                key={i}
-                className="bg-gray-50 rounded-2xl p-6 text-left hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="text-orange-400 mb-3">★★★★★</div>
-                <p className="text-sm text-gray-700 mb-4 leading-relaxed">{t.quote}</p>
-                <div className="flex items-center gap-3">
-                  <img src={t.avatar} alt={t.name} className="w-9 h-9 rounded-full" />
-                  <div>
-                    <p className="text-sm font-semibold">{t.name}</p>
-                    <p className="text-xs text-gray-500">{t.role}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        )}
+        {/* Featurable Google Reviews Widget */}
+        <div
+          ref={featurableRef}
+          id="featurable-258a4c79-d580-4efa-bf06-cbba19ab6cc8"
+          data-featurable-async
+        ></div>
 
         <a
           href="https://maps.google.com/?q=Shine+Pro+Hosapete"
@@ -1085,10 +1069,10 @@ const CarDetail = () => {
               <div>
                 <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Call now</p>
                 <a
-                  href="tel:+918431845633"
+                  href="tel:+916361291895"
                   className="text-lg font-semibold hover:text-orange-500 transition"
                 >
-                  +91 84318 45633
+                  +91 6361291895
                 </a>
               </div>
 
@@ -1177,10 +1161,10 @@ const CarDetail = () => {
             </p>
             <div className="space-y-2 mb-6">
               <a
-                href="tel:+918431845633"
+                href="tel:+916361291895"
                 className="flex items-center gap-2 text-gray-700 hover:text-orange-500 transition"
               >
-                <span>✆</span> +91 84318 45633
+                <span>✆</span> +91 6361291895
               </a>
               <p className="flex items-center gap-2 text-gray-700">
                 <span>✉</span> @shinepro_hospet
@@ -1217,7 +1201,7 @@ const CarDetail = () => {
           <FooterCol
             title="Contact"
             links={[
-              { label: '+91 84318 45633', href: 'tel:+918431845633' },
+              { label: '+91 6361291895', href: 'tel:+916361291895' },
               { label: 'Saibaba Temple Road', href: '#' },
               { label: 'Hosapete, Karnataka – 583203', href: '#' },
               { label: 'Get directions', href: 'https://maps.google.com/?q=Shine+Pro+Hosapete' },
@@ -1407,7 +1391,7 @@ const TagPopup = ({ tag, onClose }) => {
               Close
             </button>
             <a
-              href="https://wa.me/918431845633?text=Hi%20Shine%20Pro!%20I%27d%20like%20a%20quote%20for%20this%20service."
+              href="https://wa.me/916361291895?text=Hi%20Shine%20Pro!%20I%27d%20like%20a%20quote%20for%20this%20service."
               target="_blank"
               rel="noopener noreferrer"
               className="flex-1 text-center bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-full transition"
