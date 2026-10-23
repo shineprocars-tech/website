@@ -10,5 +10,9 @@ export default defineConfig({
     babel({ presets: [reactCompilerPreset()] }),
     tailwindcss()
   ],
-  
+  server: {
+    allowedHosts: [
+      'berenice-hydrokinetic-tiera.ngrok-free.dev'
+    ]
+  }
 })

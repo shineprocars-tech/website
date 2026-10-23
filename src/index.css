@@ -10,6 +10,21 @@
     --font-accent: 'Michroma', sans-serif;
 }
 
+/* ============ NEW BRAND COLOR TOKENS ============ */
+:root {
+    /* Blues */
+    --brand-deep-blue: #031273;
+    --brand-royal-blue: #0504aa;
+    --brand-indigo: #4f6bff;
+
+    /* Oranges */
+    --brand-yellow: #f59e0b;
+    --brand-orange: #ff4800;
+
+    /* Neutrals */
+    --brand-white: #d7f2fa;
+}
+
 /* Global Styles */
 html {
     scroll-behavior: smooth;
@@ -80,4 +95,22 @@ h3 {
     html {
         scroll-behavior: auto;
     }
+}
+
+/* =========================================
+   HIDE SCROLLBAR COMPLETELY
+   ========================================= */
+
+/* For Chrome, Safari, Edge, and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge, and Firefox */
+html,
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
