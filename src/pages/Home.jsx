@@ -343,9 +343,9 @@ const Home = () => {
         <section className="relative w-full bg-[#fdfdfd] overflow-hidden flex flex-col md:flex-row md:min-h-[600px] lg:min-h-[700px]">
           
           {/* Image Column (Person Photo + Black Bottom Gradient) */}
-          <div className="relative w-full md:absolute md:top-0 top-10 md:right-0 md:w-[35%] md:h-full z-0 flex items-end justify-center order-1 md:order-2 py-8 md:py-0 overflow-hidden">
+          <div className="relative w-full md:absolute md:top-0 top-10 md:left-250 md:w-[35%] md:h-full z-0 flex items-end justify-center order-1 md:order-2 py-8 md:py-0 overflow-hidden">
             <img 
-              src="https://res.cloudinary.com/djpfw1goz/image/upload/v1792753167/IMG-20261023-WA0010.jpg_e7tbhv.png" 
+              src="https://res.cloudinary.com/djpfw1goz/image/upload/v1792799141/IMG_0867_mu6pg2.png" 
               alt="M. V. Gururaj - Founder" 
               className="w-full h-full object-cover object-top md:object-center relative z-0" 
             />
@@ -448,46 +448,124 @@ const Home = () => {
         </section>
 
         {/* PRODUCT SHOWCASE */}
-        <section className="relative w-full bg-[#050505] py-20 overflow-hidden border-y border-white/5">
-          <div className="max-w-[1400px] mx-auto px-4 md:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
-              <div className="flex items-center gap-6">
-                <div>
-                  <h2 className="font-medium text-white tracking-widest text-2xl md:text-4xl mb-1">PRODUCT SHOWCASE</h2>
-                  <p className="text-[16px] md:text-xs font-commissioner tracking-widest uppercase" style={{ color: BRAND.yellow }}>Engineered to perform.<br className="hidden md:block" /> Designed to stand apart.</p>
-                </div>
-              </div>
-            </div>
+<section className="relative w-full bg-[#050505] py-20 overflow-hidden border-y border-white/5">
+  <div className="max-w-[1400px] mx-auto px-4 md:px-8">
+    <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 gap-6">
+      <div className="flex items-center gap-6">
+        <div>
+          <h2 className="font-medium text-white tracking-widest text-2xl md:text-4xl mb-1">
+            PRODUCT SHOWCASE
+          </h2>
+          <p
+            className="text-[16px] md:text-xs font-commissioner tracking-widest uppercase"
+            style={{ color: BRAND.yellow }}
+          >
+            Engineered to perform.
+            <br className="hidden md:block" /> Designed to stand apart.
+          </p>
+        </div>
+      </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {PRODUCTS.map((prod) => (
-                <div key={prod.id} className="group relative bg-[#0a0a0a] h-[500px] lg:h-[600px] flex flex-col justify-between p-6 md:p-8 overflow-hidden transition-all duration-500 hover:bg-[#111]">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-500" style={{ backgroundImage: `linear-gradient(${BRAND.yellow} 1px, transparent 1px), linear-gradient(90deg, ${BRAND.yellow} 1px, transparent 1px)`, backgroundSize: '40px 40px' }} />
-                  <div className="relative z-10 flex justify-between items-start">
-                    <div>
-                      <h3 className="font-medium text-2xl md:text-4xl text-white uppercase tracking-wider mb-2">{prod.title}</h3>
-                      <p className="font-commissioner text-[16px] md:text-xs tracking-widest uppercase mb-6" style={{ color: BRAND.yellow }}>{prod.subtitle}</p>
-                      <ul className="space-y-1.5 transition-opacity duration-500">
-                        {prod.desc.map((d, i) => (
-                          <li key={i} className="text-[14px] md:text-xs text-gray-100 font-commissioner flex items-center gap-2">
-                            <span className="w-1 h-1 rounded-full" style={{ backgroundColor: BRAND.yellow }} /> {d}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 flex items-center justify-center top-44 p-8 pointer-events-none">
-                    <img src={prod.img} alt={prod.title} className="w-[120%] max-w-[300px] object-contain transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3 opacity-80 group-hover:opacity-100" />
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* GET A QUOTE BUTTON (desktop) */}
+      <button
+        type="button"
+        onClick={() => {
+          setSelectedPackage('Premium Accessories');
+          setBookingOpen(true);
+        }}
+        className="hidden md:inline-flex items-center gap-2 px-6 py-3 rounded-full font-michroma font-bold text-sm tracking-widest uppercase hover:scale-[1.03] active:scale-95 transition-all duration-200"
+        style={{
+          backgroundColor: BRAND.yellow,
+          color: BRAND.deepBlue,
+          boxShadow: `0 10px 15px -3px ${BRAND.yellow}33`,
+        }}
+      >
+        Get a Quote
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
 
-            <div className="mt-12 flex items-center gap-4 text-[10px] md:text-xs font-michroma text-gray-500 tracking-widest uppercase">
-              <span className="w-8 h-px" style={{ backgroundColor: BRAND.yellow }}></span> BUILT FOR THE ONES WHO DON'T STOP.
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+      {PRODUCTS.map((prod) => (
+        <div
+          key={prod.id}
+          className="group relative bg-[#0a0a0a] h-[500px] lg:h-[600px] flex flex-col justify-between p-6 md:p-8 overflow-hidden transition-all duration-500 hover:bg-[#111]"
+        >
+          <div
+            className="absolute inset-0 opacity-0 group-hover:opacity-10 pointer-events-none transition-opacity duration-500"
+            style={{
+              backgroundImage: `linear-gradient(${BRAND.yellow} 1px, transparent 1px), linear-gradient(90deg, ${BRAND.yellow} 1px, transparent 1px)`,
+              backgroundSize: '40px 40px',
+            }}
+          />
+          <div className="relative z-10 flex justify-between items-start">
+            <div>
+              <h3 className="font-medium text-2xl md:text-4xl text-white uppercase tracking-wider mb-2">
+                {prod.title}
+              </h3>
+              <p
+                className="font-commissioner text-[16px] md:text-xs tracking-widest uppercase mb-6"
+                style={{ color: BRAND.yellow }}
+              >
+                {prod.subtitle}
+              </p>
+              <ul className="space-y-1.5 transition-opacity duration-500">
+                {prod.desc.map((d, i) => (
+                  <li
+                    key={i}
+                    className="text-[14px] md:text-xs text-gray-100 font-commissioner flex items-center gap-2"
+                  >
+                    <span
+                      className="w-1 h-1 rounded-full"
+                      style={{ backgroundColor: BRAND.yellow }}
+                    />{' '}
+                    {d}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
-        </section>
+          <div className="absolute inset-0 flex items-center justify-center top-44 p-8 pointer-events-none">
+            <img
+              src={prod.img}
+              alt={prod.title}
+              className="w-[120%] max-w-[300px] object-contain transition-transform duration-700 group-hover:scale-110 group-hover:-rotate-3 opacity-80 group-hover:opacity-100"
+            />
+          </div>
+        </div>
+      ))}
+    </div>
+
+    {/* BOTTOM ROW: tagline + mobile CTA */}
+    <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+      <div className="flex items-center gap-4 text-[10px] md:text-xs font-michroma text-gray-500 tracking-widest uppercase">
+        <span
+          className="w-8 h-px"
+          style={{ backgroundColor: BRAND.yellow }}
+        ></span>{' '}
+        BUILT FOR THE ONES WHO DON'T STOP.
+      </div>
+
+      {/* GET A QUOTE BUTTON (mobile) */}
+      <button
+        type="button"
+        onClick={() => {
+          setSelectedPackage('Premium Accessories');
+          setBookingOpen(true);
+        }}
+        className="md:hidden inline-flex items-center justify-center gap-2 w-full px-6 py-3 rounded-full font-michroma font-bold text-sm tracking-widest uppercase hover:scale-[1.02] active:scale-95 transition-all duration-200"
+        style={{
+          backgroundColor: BRAND.yellow,
+          color: BRAND.deepBlue,
+          boxShadow: `0 10px 15px -3px ${BRAND.yellow}33`,
+        }}
+      >
+        Get a Quote
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+</section>
 
         {/* OUR WORK */}
         <section id="work" className="relative max-w-7xl mx-auto px-6 py-20 md:py-28 overflow-hidden">
@@ -594,8 +672,7 @@ const Home = () => {
                 Meet The <span className="font-black italic" style={{ color: BRAND.yellow }}>Team</span>
               </h2>
               <p className="mt-4 text-gray-100 max-w-2xl text-sm md:text-base font-commissioner">
-                Passionate professionals dedicated to preserving and elevating your vehicle. Certified, experienced, and obsessed with perfection.
-              </p>
+                Our experienced team delivers precision in every work and every detail, because the smallest details define the finest finish </p>
             </div>
 
             <div className="relative group w-full max-w-5xl mx-auto">
