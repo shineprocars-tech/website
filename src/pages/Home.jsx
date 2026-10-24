@@ -29,22 +29,22 @@ const BRAND = {
 const CAR_SERVICES = [
   {
     id: 'ppf',
-    title: 'PPF WRAPPING',
+    title: 'Paint Protection Film (PPF)',
     route: '/services/paint-protection/ppf-wrapping',
     x: 50,
     y: 25,
     side: 'left',
     img: 'https://i.pinimg.com/236x/25/93/b0/2593b0fb3a3fea6fc05be6ad73d8285d.jpg',
   },
-  {
-    id: 'detailing',
-    title: 'PAINT CORRECTION',
-    route: '/services/detailing-restoration/paint-correction',
-    x: 40,
-    y: 65,
-    side: 'left',
-    img: 'https://i.pinimg.com/1200x/a4/cd/a1/a4cda128dd0306b0fa7df38360b63488.jpg',
-  },
+ {
+  id: 'accessories',
+  title: 'CAR ACCESSORIES',
+  route: '/services/detailing-restoration/car-accessories',
+  x: 40,
+  y: 65,
+  side: 'left',
+  img: 'https://i.pinimg.com/736x/71/b3/08/71b308b0f1a256d73f39442fdcea34e6.jpg',
+},
   {
     id: 'interior',
     title: 'INTERIOR DETAIL',
@@ -155,7 +155,7 @@ const TyreMark = ({ className }) => (
 
 const Home = () => {
   const [bookingOpen, setBookingOpen] = useState(false);
-  const [selectedPackage, setSelectedPackage] = useState('PPF WRAPPING');
+  const [selectedPackage, setSelectedPackage] = useState('Paint Protection Film (PPF)');
   const [statsVisible, setStatsVisible] = useState(false);
   const [tagPopup, setTagPopup] = useState(null);
   
@@ -365,7 +365,7 @@ const Home = () => {
                 <strong className="font-bold" style={{ color: BRAND.yellow }}>Mr. M. V. Gururaj – Founder, ShinePro Car Care & Spa</strong> <br/> With an M.sc, M.phil in Chemistry and a deep passion for automotive care, vehicle aesthetics, and innovation, Mr. M. V. Gururaj brings over 17 years of industry experience. Driven by his vision to redefine car care, he founded ShinePro Car Care & Spa in 2016, formally established in 2020.
               </p>
               <p className="text-gray-100 text-lg md:text-[15px] leading-relaxed mb-6 md:mb-10 font-commissioner">
-                ShinePro specialises in premium car care solutions, including PPF, ceramic and graphene coatings, and vehicle modifications. Having gained valuable experience with leading automotive brands such as Toyota, Tata Motors, and Hyundai in value-added services, Mr. Gururaj is committed to innovation, quality workmanship, and customer satisfaction.
+                ShinePro specialises in premium car care solutions, including Paint Protection Film (PPF), ceramic and graphene coatings, and vehicle modifications. Having gained valuable experience with leading automotive brands such as Toyota, Tata Motors, and Hyundai in value-added services, Mr. Gururaj is committed to innovation, quality workmanship, and customer satisfaction.
               </p>
             </div>
           </div>
@@ -431,7 +431,7 @@ const Home = () => {
         <section className="relative w-full bg-[#f5f7fb] py-12 md:py-16 overflow-hidden border-t border-white/5">
           <div className="max-w-[1400px] mx-auto px-4 md:px-8 mb-8">
             <div className="flex items-center gap-3 text-[10px] md:text-xs font-michroma text-gray-500 tracking-widest uppercase">
-              <span className="w-8 h-px" style={{ backgroundColor: BRAND.indigo }}></span> Trusted by premium brands
+              <span className="w-8 h-px" style={{ backgroundColor: BRAND.indigo }}></span> Renowned brands
             </div>
           </div>
           <div className="relative overflow-hidden group">
@@ -538,7 +538,7 @@ const Home = () => {
 
     {/* BOTTOM ROW: tagline + mobile CTA */}
     <div className="mt-12 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
-      <div className="flex items-center gap-4 text-[10px] md:text-xs font-michroma text-gray-500 tracking-widest uppercase">
+      <div className="flex items-center gap-4 text-[10px] md:text-xs font-michroma text-gray-100 tracking-widest uppercase">
         <span
           className="w-8 h-px"
           style={{ backgroundColor: BRAND.yellow }}

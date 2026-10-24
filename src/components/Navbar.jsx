@@ -11,7 +11,7 @@ const BRAND = {
 
 const whatsappNumber = '916361291895';
 const whatsappMessage = encodeURIComponent(
-  "Hi Shine Pro! I'd like a quote for PPF / ceramic coating / detailing."
+  "Hi Shine Pro! I'd like a quote for Paint Protection Film (PPF)/ ceramic coating / detailing."
 );
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -22,8 +22,8 @@ const navItems = [
     label: 'Services',
     description: 'Premium paint protection, detailing, and studio upgrades.',
     links: [
-      { label: 'PPF Wrapping', href: '/services/paint-protection/ppf-wrapping' },
-      { label: 'Paint Correction', href: '/services/detailing-restoration/paint-correction' },
+      { label: 'PPF', href: '/services/paint-protection/ppf-wrapping' },
+      { label: 'Car Accessories', href: '/services/detailing-restoration/car-accessories' },
       { label: 'Interior Detail', href: '/services/detailing-restoration/interior-detail' },
     ],
   },
