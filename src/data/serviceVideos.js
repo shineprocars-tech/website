@@ -5,14 +5,14 @@ export const serviceVideos = [
     category: 'Paint protection',
     services: [
       {
-        service_name: 'PPF Wrapping',
+        service_name: 'Paint Protection Film (PPF)',
         slug: 'ppf-wrapping',
-        description: 'Self-healing paint protection film that shields your vehicle\'s factory paint from stone chips, scratches, swirl marks, and UV damage.',
+        description: ' Paint Protection Film (PPF) that shields your vehicle\'s factory paint from stone chips, scratches, swirl marks, and UV damage.',
         why_needed: 'Protects your car\'s original paint from daily road hazards like gravel, debris, and minor impacts. Maintains resale value by preserving factory finish. Self-healing top coat eliminates minor scratches with heat.',
         video_url: 'https://res.cloudinary.com/djpfw1goz/video/upload/v1792593190/WhatsApp_Video_2026-10-18_at_7.58.21_PM_z5ntbd.mp4',
         thumbnail: 'https://i.pinimg.com/1200x/b1/23/f2/b123f2db953c07d2c5f088b0e4ae9f38.jpg',
         duration: '2:30',
-        features: ['Self-healing top coat', 'Stone-chip protection', 'UV & swirl resistance', 'Warranty-backed film', 'Invisible protection'],
+        features: ['Paint Protection Film (PPF) top coat', 'Stone-chip protection', 'UV & swirl resistance', 'Warranty-backed film', 'Invisible protection'],
       },
       {
         service_name: 'Ceramic Coating',
@@ -40,30 +40,21 @@ export const serviceVideos = [
   {
     category: 'Detailing & restoration',
     services: [
-      {
-        service_name: 'Premium Car Wash',
-        slug: 'premium-car-wash',
-        description: 'pH-neutral shampoos, two-bucket method, and foam cannon for a swirl-free, deep clean that protects your paint.',
-        why_needed: 'Regular washing with improper technique causes micro-scratches and swirl marks. Professional wash preserves paint clarity and prepares surface for protection coatings.',
-        video_url: '/videos/services/premium-car-wash.mp4',
-        thumbnail: 'https://i.pinimg.com/736x/45/76/6e/45766e701589a774fde1703578b97573.jpg',
-        duration: '3:00',
-        features: ['pH-neutral shampoos', 'Two-bucket method', 'Foam cannon', 'Swirl-free finish', 'Paint-safe'],
-      },
+      
   
     
       
    
-      {
-        service_name: 'Paint Correction',
-        slug: 'paint-correction',
-        description: 'Multi-stage machine polishing process that removes swirl marks, scratches, oxidation, and holograms to restore perfect paint clarity and depth.',
-        why_needed: 'Over time, improper washing and environmental exposure create micro-scratches that dull your paint. Paint correction permanently removes these defects, restoring showroom-level gloss and preparing the surface for ceramic coating or PPF. Essential before applying any protection coating for maximum bonding and appearance.',
-        video_url: '/videos/services/paint-correction.mp4',
-        thumbnail: 'https://i.pinimg.com/736x/60/85/70/6085701ef7959797b8a0516cde66247f.jpg',
-        duration: '4:00',
-        features: ['Swirl mark removal', 'Scratch elimination', 'Oxidation removal', 'Hologram removal', 'Mirror finish', 'Pre-coating prep'],
-      },
+              {
+          service_name: 'Car Accessories',
+          slug: 'car-accessories',
+          description: 'Premium interior and exterior accessories installation service — from custom-fit floor mats, seat covers, and ambient lighting to alloy wheels, roof racks, and styling kits — tailored to your vehicle for enhanced comfort, protection, and personalization.',
+          why_needed: 'Factory-standard vehicles often lack the comfort, protection, and personality you want. Our accessories range shields your interior from wear and spills, upgrades convenience with smart add-ons, and gives your car a distinctive look. Professionally fitted accessories preserve resale value, ensure perfect fitment without voiding warranties, and elevate your everyday driving experience.',
+          video_url: '/videos/services/car-accessories.mp4',
+          thumbnail: 'https://i.pinimg.com/736x/71/b3/08/71b308b0f1a256d73f39442fdcea34e6.jpg',
+          duration: '4:00',
+          features: ['Custom-fit floor mats', 'Seat covers & upholstery', 'Ambient & LED lighting', 'Alloy wheels & styling kits', 'Roof racks & carriers', 'Interior protection & organizers'],
+        },
       {
         service_name: 'Interior Detail',
         slug: 'interior-detail',

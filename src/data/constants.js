@@ -7,12 +7,12 @@ export const REELS = [
 
 export const heroTags = [
   {
-    label: 'PPF',
+    label: 'Paint Protection Film (PPF)',
     title: 'Paint Protection Film',
     image:
       'https://images.unsplash.com/photo-1601362840469-51e4d8d58785?w=900&auto=format&fit=crop',
     description:
-      'Troro premium paint protection film — shields factory paint from stone chips, swirls, and UV damage.',
+      'Premium Paint Protection Film (PPF) — shields factory paint from stone chips, swirls, and UV damage.',
   },
   {
     label: 'Ceramic',
@@ -58,7 +58,7 @@ export const heroTags = [
 
 export const topServiceCards = [
   {
-    title: 'PPF WRAPPING',
+    title: 'Paint Protection Film (PPF)',
     img: 'https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600&auto=format&fit=crop',
     route: '/services/paint-protection',
   },
@@ -99,7 +99,7 @@ export const serviceImages = {
 
 export const serviceDetails = {
   'Paint protection': [
-    'PPF wrapping',
+    'Paint Protection Film (PPF) wrapping',
     'Ceramic coating',
     'Graphene coating',
     'Polymer coat',
@@ -136,7 +136,7 @@ export const stats = [
 
 export const packages = [
   {
-    name: 'PPF WRAPPING',
+    name: 'Paint Protection Film (PPF)',
     desc: 'Troro premium paint protection film for glossy SUVs and daily-driven cars.',
     features: [
       'Self-healing top coat',
@@ -178,21 +178,21 @@ export const packages = [
 export const testimonials = [
   {
     quote:
-      '"Got PPF done for my new Mahindra 3XO — attention to detail and finish were top-notch. Owner Guru was extremely friendly and professional throughout."',
+      '"Got Paint Protection Film (PPF) done for my new Mahindra 3XO — attention to detail and finish were top-notch. Owner Guru was extremely friendly and professional throughout."',
     name: 'Pratham',
     role: 'Mahindra 3XO',
     avatar: 'https://i.pravatar.cc/100?img=15',
   },
   {
     quote:
-      '"PPF work is nothing short of excellent. Interior work was done exceptionally well."',
+      '"Paint Protection Film (PPF) work is nothing short of excellent. Interior work was done exceptionally well."',
     name: 'Balaji Singh',
     role: 'Scorpio',
     avatar: 'https://i.pravatar.cc/100?img=52',
   },
   {
     quote:
-      '"Mr. Gururaj explained PPF vs ceramic coating clearly. Materials are branded and original."',
+      '"Mr. Gururaj explained Paint Protection Film (PPF) vs ceramic coating clearly. Materials are branded and original."',
     name: 'Sandesh Pai',
     role: 'Customer',
     avatar: 'https://i.pravatar.cc/100?img=33',
@@ -215,7 +215,7 @@ export const testimonials = [
 
 export const whatsappNumber = '916361291895';
 export const whatsappMessage = encodeURIComponent(
-  "Hi Shine Pro! I'd like a quote for PPF / ceramic coating / detailing."
+  "Hi Shine Pro! I'd like a quote for Paint Protection Film (PPF) / ceramic coating / detailing."
 );
 export const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
@@ -232,7 +232,7 @@ export const serviceRouteMap = {
     key: 'Paint protection',
     description: 'Premium paint protection film, ceramic coating, and graphene coating solutions to shield your vehicle from stone chips, swirls, UV damage, and environmental contaminants.',
     features: [
-      'PPF wrapping — self-healing top coat, stone-chip protection, UV & swirl resistance, warranty-backed film',
+      'Paint Protection Film (PPF) wrapping — self-healing top coat, stone-chip protection, UV & swirl resistance, warranty-backed film',
       'Ceramic coating — 9H-grade ceramic layer, hydrophobic finish, showroom-grade shine, 1–3 year protection',
       'Graphene coating — next-gen graphene coating, extra slickness, better heat resistance, long-lasting shine',
       'Polymer coat — durable polymer protection for daily-driven vehicles',

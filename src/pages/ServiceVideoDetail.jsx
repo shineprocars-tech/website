@@ -46,13 +46,13 @@ const ServiceVideoDetail = () => {
   }
 
   const packageMap = {
-    'Paint protection': 'PPF WRAPPING',
+    'Paint protection': 'PPF',
     'Detailing & restoration': 'DETAIL + UPGRADES',
-    'Protection extras': 'PPF WRAPPING',
+    'Protection extras': 'PPF',
     'Studio upgrades': 'DETAIL + UPGRADES',
   };
 
-  const selectedPackage = packageMap[service.category] || 'PPF WRAPPING';
+  const selectedPackage = packageMap[service.category] || 'PPF';
 
   // ============ RELATED SERVICES LOGIC ============
   const relatedServices = categoryData
