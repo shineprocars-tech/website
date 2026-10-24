@@ -1,1 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Michroma&family=Orbitron:wght@400..900&family=Zen+Dots&display=swap');
+
 @import "tailwindcss";
+
+/* Font Configuration */
+:root {
+    --font-body: 'Commissioner', sans-serif;
+    --font-heading: 'Orbitron', sans-serif;
+    --font-brand: 'Zen Dots', sans-serif;
+    --font-accent: 'Michroma', sans-serif;
+}
+
+/* ============ NEW BRAND COLOR TOKENS ============ */
+:root {
+    /* Blues */
+    --brand-deep-blue: #031273;
+    --brand-royal-blue: #0504aa;
+    --brand-indigo: #4f6bff;
+
+    /* Oranges */
+    --brand-yellow: #f59e0b;
+    --brand-orange: #ff4800;
+
+    /* Neutrals */
+    --brand-white: #d7f2fa;
+}
+
+/* Global Styles */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+}
+
+/* Heading Font */
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+}
+
+/* Custom Font Utilities */
+.font-brand {
+    font-family: var(--font-brand);
+}
+
+.font-accent {
+    font-family: var(--font-accent);
+}
+
+/* Slow Rotation Animation */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 20s linear infinite;
+}
+
+/* Marquee Animation */
+@keyframes marquee {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-marquee {
+    animation: marquee 40s linear infinite;
+}
+
+.animate-marquee:hover {
+    animation-play-state: paused;
+}
+
+/* Respect Reduced Motion Preferences */
+@media (prefers-reduced-motion: reduce) {
+
+    .animate-spin-slow,
+    .animate-marquee {
+        animation: none;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* =========================================
+   HIDE SCROLLBAR COMPLETELY
+   ========================================= */
+
+/* For Chrome, Safari, Edge, and Opera */
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* For IE, Edge, and Firefox */
+html,
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
